@@ -1,11 +1,12 @@
 name: flutter_multiplatform_logger
-description: "A new Flutter package project."
-version: 0.0.1
-homepage:
+description: "Cross-platform logger with file rotation for Flutter. Works on Web, Android, iOS, Linux, macOS, and Windows."
+version: 1.0.0
+homepage: https://github.com/immsong/flutter_multiplatform_logger
+repository: https://github.com/immsong/flutter_multiplatform_logger
 
 environment:
-  sdk: ^3.9.2
-  flutter: ">=1.17.0"
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: ">=3.0.0"
 
 dependencies:
   flutter:

@@ -21,7 +21,7 @@ class CustomLogFormatter extends LogRecordFormatter {
     if (rec.error == null && rec.stackTrace == null) {
       try {
         final frames = Chain.current().traces.first.frames;
-        
+
         // Skip internal logger frames, find the real caller
         final frame = frames.firstWhere(
           (frame) =>
@@ -57,9 +57,9 @@ class CustomLogFormatter extends LogRecordFormatter {
 /// Only prints to browser console (no file saving on web).
 class FlutterMultiplatformLogger {
   /// Start the logger for web.
-  /// 
+  ///
   /// **Important**: Use `await` before this!
-  /// 
+  ///
   /// Note: Settings like file size don't work on web since we can't save files.
   static Future<void> init() async {
     await LoggerConfig.initialize();
