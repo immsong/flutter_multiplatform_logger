@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
-void main() {
+import 'package:flutter_multiplatform_logger/flutter_multiplatform_logger.dart';
+
+void main() async {
+  await FlutterMultiplatformLogger.init();
+  Logger('Main').info('Application started!');
+
   runApp(const MyApp());
 }
 
@@ -54,9 +59,12 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final Logger _logger = Logger('MyHomePage');
   int _counter = 0;
 
   void _incrementCounter() {
+    _logger.info('Increment button pressed $_counter times');
+
     setState(() {
       // This call to setState tells the Flutter framework that something has
       // changed in this State, which causes it to rerun the build method below
