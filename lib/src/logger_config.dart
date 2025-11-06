@@ -1,21 +1,21 @@
 import 'package:package_info_plus/package_info_plus.dart';
 
 /// Logger settings.
-/// 
+///
 /// All settings are static and can be customized during initialization.
 class LoggerConfig {
   /// Max log file size before creating a new file (default: 1MB)
   static int maxFileSizeBytes = 1024 * 1024;
-  
+
   /// How many old log files to keep (default: 10)
   static int maxBackupCount = 10;
-  
+
   /// How often to check if files need rotation (default: 1 minute)
   static Duration rotateCheckInterval = Duration(minutes: 1);
-  
+
   /// Folder name for logs (default: 'logs')
   static String logDirName = 'logs';
-  
+
   /// Log file name (default: 'app')
   static String logFileName = 'app';
 
@@ -23,10 +23,10 @@ class LoggerConfig {
   static String? _packageName;
 
   /// Set up the logger.
-  /// 
+  ///
   /// Call this before using the logger. It loads your app's package name
   /// and lets you change settings.
-  /// 
+  ///
   /// Example:
   ///
   /// await LoggerConfig.initialize(
